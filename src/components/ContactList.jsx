@@ -2,6 +2,8 @@ import Contact from "./Contact";
 
 
 const ContactList = ({ contacts = [], deleteFromList }) => {
+  console.log('Contacts in ContactList:', contacts); // Logowana lista kontaktów
+
   return (
     <div className="contact-list-div">
       {contacts.length > 0 ? (
@@ -13,6 +15,7 @@ const ContactList = ({ contacts = [], deleteFromList }) => {
       )}
     </div>
   ); 
-  };
+};
+
 
 export default ContactList;
