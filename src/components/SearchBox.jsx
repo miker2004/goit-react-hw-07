@@ -2,7 +2,6 @@ import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { setFilter } from "../redux/filter";
 
-
 const SearchBox = () => {
   const dispatch = useDispatch();
 
@@ -11,9 +10,6 @@ const SearchBox = () => {
       <h2>Find contacts by name</h2>
       <Formik
         initialValues={{ searchTerm: '' }} 
-        onSubmit={(values) => {
-          dispatch(setFilter(values.searchTerm)); 
-        }}
       >
         {({ values, handleChange }) => (
           <Form>
